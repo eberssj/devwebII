@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Frete</title>
+    <script src="../EX_3/ex3.js"></script>
+</head>
+<body>
+    <h1>Descubra seu frete</h1>
+    <label for="distancia">Distância em km:</label>
+    <input type="number" id="distancia" required><br>
+    <label for="pecas">Numero de pecas:</label>
+    <input type="number" id="pecas" required><br>
+    <label for="regiao">Regiao:</label>
+    <select id="regiao">
+        <option value="sul">Sul</option>
+        <option value="sudeste">Sudeste</option>
+        <option value="centro-oeste">Centro-oeste</option>
+    </select><br>
+    <label for="rastreamento">Deseja rastreamento?</label>
+    <input type="checkbox" id="rastreamento"><br>
+    <button onclick="calcularFrete()">Calcular Frete</button>
+    <p>Taxa do rastreamento: <span id="taxaRastreamento">0.00</span></p>
+    <p>Valor do frete pelas peças: <span id="valorFretePecas">0.00</span></p>
+    <p>Valor do frete por quilômetro: <span id="valorFreteKm">0.00</span></p>
+    <p>Total do frete: <span id="totalFrete">0.00</span></p>
+</body>
+</html>
