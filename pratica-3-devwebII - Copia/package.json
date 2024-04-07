@@ -1,0 +1,23 @@
+{
+  "name": "pratica-3-devwebii",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/mysql": "^2.15.26",
+    "@types/node": "^20.12.4",
+    "typescript": "^5.4.4"
+  },
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.19.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^3.9.3"
+  }
+}

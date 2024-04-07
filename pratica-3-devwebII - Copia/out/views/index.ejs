@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Cliente e Pedido</title>
+</head>
+<body>
+    
+    <h1>Cadastrar Clientes</h1>
+    <form action="/clientes" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br>
+        <label for="rg">Rg:</label>
+        <input type="rg" id="rg" name="rg" required><br>
+        <label for="cpf">Cpf:</label>
+        <input type="cpf" id="cpf" name="cpf" required><br>
+        <label for="telefone">Telefone:</label>
+        <input type="telefone" id="telefone" name="telefone" required><br>
+        <button type="submit">Cadastrar Cliente</button>
+    </form>
+        
+    <h1>Cadastrar Pedido</h1>
+    <form action="/pedidos" method="POST">
+        <label for="descricao">Descrição:</label>
+        <input type="text" id="descricao" name="descricao" required><br>
+        <label for="cliente_id">Cliente:</label>
+        <select id="cliente_id" name="cliente_id">
+            <% clientes.forEach(cliente => { %>
+                <option value="<%= cliente.cliente_id %>"><%= cliente.cliente_nome %></option>
+            <% }); %>
+        </select><br>
+        <button type="submit">Cadastrar Pedido</button>
+    </form>
+
+    <h1>Clientes e Pedidos</h1>
+    <ul>
+      <% clientes.forEach(cliente => { %>
+        <li><strong><%= cliente.cliente_nome %>:</strong> <%= cliente.pedido_descricao %></li>
+      <% }); %>
+    </ul>
+</body>
+</html>
