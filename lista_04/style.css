@@ -1,0 +1,98 @@
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: #fff;
+    text-align: center;
+    margin: 0 90px;
+    padding: 0;
+}
+
+h1 {
+    padding-top: 20px;
+    color: #382615;
+}
+
+form {
+    background-color: #fff;
+    border: 1px solid #382615;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #382615;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #D89D63;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #e7b481;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    border: 1px solid #382615;
+    border-radius: 3px;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+span {
+    flex: 1;
+    text-align: left;
+}
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.edit-button,
+.delete-button {
+    text-decoration: none;
+    color: #D89D63;
+    margin: 0 10px;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+    text-decoration: underline;
+}
+
+a {
+    color: #D89D63;
+    text-decoration: none;
+    padding-bottom: 2%;
+}

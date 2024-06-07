@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Lista de Músicas, Artistas e Álbuns</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500;600;700&display=swap">
+</head>
+
+<body>
+
+    <h1>Lista de Artistas</h1>
+    <ul>
+        <% artistas.forEach(artista => { %>
+            <li>
+                <span><%= artista.nome_artista %></span>
+                <div class="action-buttons">
+                    <a class="edit-button" href="/edit/artist/<%= artista.id_artista %>">Editar</a>
+                    <a class="delete-button" href="/delete/artist/<%= artista.id_artista %>">Deletar</a>
+                </div>
+            </li>
+        <% }); %>
+    </ul>
+
+
+    <h1>Lista de Álbuns</h1>
+    <ul>
+        <% albuns.forEach(album => { %>
+            <li>
+                <span><%= album.titulo_album %> - <%= album.ano_lancamento %> - <%= album.id_artista %></span>
+                <div class="action-buttons">
+                    <a class="edit-button" href="/edit/album/<%= album.id_album %>">Editar</a>
+                    <a class="delete-button" href="/delete/album/<%= album.id_album %>">Deletar</a>
+                </div>
+            </li>
+        <% }); %>
+    </ul>
+
+    <h1>Lista de Músicas</h1>
+    <ul>
+        <% musicas.forEach(musica => { %>
+            <li>
+                <span>
+                    <%= musica.titulo_musica %> -
+                    <%= musica.id_album %> -
+                    <%= musica.ano_lancamento %> -
+                    <%= musica.id_artista %>
+                </span>
+                <div class="action-buttons">
+                    <a class="edit-button" href="/edit/musica/<%= musica.id_musica %>">Editar</a>
+                    <a class="delete-button" href="/delete/musica/<%= musica.id_musica %>">Deletar</a>
+                </div>
+            </li>
+        <% }); %>
+    </ul>
+
+    <a href="/create">Criar novo artista, album ou música.</a>
+</body>
+
+</html>

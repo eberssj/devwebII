@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Edit Album</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500;600;700&display=swap">
+</head>
+<body>
+  <h1>Edit Album</h1>
+  <form action="/update/album/<%= album.id_album %>" method="post">
+    <label for="titulo_album">Title:</label>
+    <input type="text" id="titulo_album" name="titulo_album" value="<%= album.titulo_album %>">
+    
+    <label for="ano_lancamento">Year:</label>
+    <input type="text" id="ano_lancamento" name="ano_lancamento" value="<%= album.ano_lancamento %>">
+    
+    <label for="id_artista">Artist:</label>
+    <select id="id_artista" name="id_artista">
+      <% artistas.forEach(artista => { %>
+        <option value="<%= artista.id_artista %>" <%= artista.id_artista === album.id_artista ? 'selected' : '' %>><%= artista.nome_artista %></option>
+      <% }); %>
+    </select>
+    
+    <button type="submit">Save</button>
+  </form>
+</body>
+</html>
